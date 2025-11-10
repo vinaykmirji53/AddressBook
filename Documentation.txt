@@ -1,0 +1,298 @@
+1.⁠ ⁠Project Title: Address Book
+
+2.⁠ ⁠Name: Vinay K Mirji
+
+3.⁠ ⁠Start Date: 15/09/2025
+
+4.⁠ ⁠End Date: 19/09/2025
+
+5. Description:The Address Book project is a console-based application written in C language.
+   It maintains and manages personal contact information including name, phone number, and email ID.
+
+-> The program allows users to:
+    *  Add new contacts with validations for name, phone number, and email ID.
+    *  Search existing contacts using name, phone number, or email ID.
+    *  Edit contact details based on search results.
+    *  Delete contacts with confirmation (supports multiple matches).
+    *  Display all contacts with sorting options (by name, phone, email, or normal order).
+    *  This project strengthens understanding of strings, arrays, structures, and file handling in C.
+
+6.Sample input and outputs:
+
+a.  Create contact:
+    //creating contact with validation of name
+    case 1:-
+
+    sample input:
+    Enter the Name: Vinay  
+    Enter the Phone number: 8431660148  
+    Enter the Email ID: vinaymirji2003@gmail.com  
+
+    sample output:
+    Contact added!
+
+    case 2:-
+
+    sample input:
+    Enter the Name: Vinay  
+    Enter the Phone number: 9876543210  
+    Enter the Email ID: vinay5054@gmail.com  
+
+    sample output:
+    Contact added!
+
+    case 3:-
+    sample input:
+    Enter the Name: Vinay@123
+
+    sample output:
+    Entered name is Invalid!
+
+    //creating contact with validation of phone number
+    case 4:-
+    sample input:
+    Enter the Name: Rahul  
+    Enter the Phone number: 12345abc  
+
+    sample output:
+    Entered phone number is Invalid!
+    
+    case 5:-
+    sample input:
+    Enter the Name: Rajesh  
+    Enter the Phone number: 1234567890 //number already in the adress book
+    
+    sample output:
+    Entered phone number is Invalid!  
+
+    //creating contact with validation of email ID
+    case 6:-
+    sample input:
+    Enter the Name: Girish  
+    Enter the Phone number: 8765987632
+    Enter the Email ID: giri.@gmail.com
+
+    sample output:
+    Entered Email ID is Valid!
+
+    case 7:-
+    sample input:
+    Enter the Name: Rocky  
+    Enter the Phone number: 9972654350
+    Enter the Email ID: vikkyrocky@gmail.com
+
+    sample output:
+    Contact Added! 
+
+b.  Search contact:
+    //Search by name
+    case 1:
+    sample input:
+    Enter the Name/Phone number/Email to search: vinnayyyy
+
+    sample output:
+    Index     Name         Phone         Email
+    No contacts found
+
+    case 2:
+    sample input:
+    Enter the Name/Phone number/Email to search: John Doe  
+
+    sample output:
+    Index   Name           Phone        Email
+    0       John Doe       1234567890   john@example.com
+    Contact is found
+
+    //Search by Phone number
+    case 3:
+    sample input:
+    Enter the Name/Phone number/Email to search: 8889990000
+
+    sample output:
+    index     Name                          Phone                         Email
+    8         Ian Lewis                     8889990000                    ian@example.com
+    Contact is found
+
+    case 4:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search: 5231469875
+
+    sample output:
+    index     Name                          Phone                         Email
+    No contact found
+    
+    //search by Email
+    case 5:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search: roberts@gmail.com
+
+    sample output:
+    index     Name                          Phone                         Email
+    7         Julia Roberts                 9456123789                    roberts@gmail.com
+    Contact found
+
+    case 6:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search: oxy@gmail.com
+
+    sample output:
+    index     Name                          Phone                         Email
+    No Contact found
+
+c.  Edit contact:
+    //edit by name
+    case 1:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search: steave harington
+    index     Name                          Phone                         Email
+    10        steave harington              2365147895                    steave19@gmail.com
+    Contact is found
+
+    Enter the index of contact you want to edit: 10
+    Enter the Name: steaveee
+
+    sample output:
+    Contact updated successfully!
+
+    case 2:
+    Enter the Name/Phone number/Email ID you want to search: prii
+    index     Name                          Phone                         Email
+
+    sample output:
+    No contacts found
+
+    //edit by phone
+    case 3:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search:Grace Wilson
+    index     Name                          Phone                         Email
+    7         Grace Wilson                  2223334444                    grace@example.com
+    Contact is found
+
+    Enter the index of contact you want to edit: 7
+    Enter the Phone Number: 4444333222
+
+    sample output:
+    Contact updated successfully!
+
+    case 4:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search:3698521478
+    index     Name                          Phone                         Email
+    
+    sample output:
+    No contacts found
+
+
+    //edit by email
+    case 5:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search:Alice Smith
+    index     Name                          Phone                         Email
+    1         Alice Smith                   0987654321                    alice@example.com
+    Contact is found
+
+    Enter the index of contact you want to edit: 1
+    Enter the Email ID: alii@example.com
+    
+    sample output:
+    Contact updated successfully!
+
+    case 6:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search: alyza
+    index     Name                          Phone                         Email
+    
+    sample output:
+    No contacts found
+
+d.  Delete contact
+    case 1:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search: alyzaa
+    index     Name                          Phone                         Email
+    10        alyzaa                        5463217895                    alyza@example.com
+    Contact is found
+
+    Enter the index of contact you want to delete: 10
+    
+    sample output:
+    Contact deleted successfully!
+
+    case 2:
+    sample input:
+    Enter the Name/Phone number/Email ID you want to search: avii
+    index     Name                          Phone                         Email
+    No contacts found
+
+e.  List all contacts
+    1.Sort by name
+    2.Sort by phone
+    3.Sort by email ID
+    4.Normal method
+
+    case 1:sort by name
+    sample input:
+    Enter your option: 1
+
+    sample output:
+    Name                          Phone                         Email
+    Alice Smith                   0987654321                    alice@example.com
+    Bob Johnson                   1112223333                    bob@company.com
+    Carol White                   4445556666                    carol@company.com
+    David Brown                   7778889999                    david@example.com
+    Eve Davis                     6665554444                    eve@example.com
+    Frank Miller                  3334445555                    frank@example.com
+    Grace Wilson                  2223334444                    grace@example.com
+    Hannah Clark                  5556667777                    hannah@example.com
+    Ian Lewis                     8889990000                    ian@example.com
+    John Doe                      1234567890                    john@example.com
+
+    2:sort by phone
+    sample input:
+    Enter your option: 2
+
+    sample output:
+    Name                          Phone                         Email
+    Alice Smith                   0987654321                    alice@example.com
+    Bob Johnson                   1112223333                    bob@company.com
+    John Doe                      1234567890                    john@example.com
+    Grace Wilson                  2223334444                    grace@example.com
+    Frank Miller                  3334445555                    frank@example.com
+    Carol White                   4445556666                    carol@company.com
+    Hannah Clark                  5556667777                    hannah@example.com
+    Eve Davis                     6665554444                    eve@example.com
+    David Brown                   7778889999                    david@example.com
+    Ian Lewis                     8889990000                    ian@example.com
+
+    case 3:sort by email
+    sample input:
+    Enter your option: 3
+
+    sample output:
+    Name                          Phone                         Email
+    Alice Smith                   0987654321                    alice@example.com
+    Bob Johnson                   1112223333                    bob@company.com
+    Carol White                   4445556666                    carol@company.com
+    David Brown                   7778889999                    david@example.com
+    Eve Davis                     6665554444                    eve@example.com
+    Frank Miller                  3334445555                    frank@example.com
+    Grace Wilson                  2223334444                    grace@example.com
+    Hannah Clark                  5556667777                    hannah@example.com
+    Ian Lewis                     8889990000                    ian@example.com
+    John Doe                      1234567890                    john@example.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
